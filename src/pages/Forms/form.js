@@ -1,8 +1,10 @@
 import React from "react";
 import styles from './style.less';
-import { Table, Divider, Tag } from 'antd';
+import { Table, Divider, Tag,Button } from 'antd';
 import Link from 'umi/link';
+import New from '@/components/Customer/new.js';
 
+const ButtonGroup = Button.Group;
 const columns = [{
   title: '客户名',
   dataIndex: 'name',
@@ -21,7 +23,7 @@ const columns = [{
   key: 'action',
   render: (text, record) => (
     <span>
-      <a href="javascript:;">Invite {record.name}</a>
+      <a href="javascript:;">edit</a>
       <Divider type="vertical" />
       <a href="javascript:;">Delete</a>
     </span>
@@ -78,14 +80,16 @@ const data = [{
   address: 'Sidney No. 1 Lake Park',
   tags: ['cool', 'teacher'],
 }];
-class Form extends React.Component {
+class Forms extends React.Component {
+
   render() {
     return (
       <div>
+          <New />
           <Table columns={columns} dataSource={data} />
       </div>
     );
   }
 }
 
-export default Form;
+export default Forms;

@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Analysis.less';
 import DealSelect from '@/components/Task/DealSelect.js';
 import {Input} from 'antd';
+import Link from 'umi/link';
 const jsons = {
   "Event": [{
       "theme": "主题",
@@ -49,7 +50,7 @@ class Deal extends React.Component {
         {historys}
         </div>
         <div className={styles.TodayEventhr}></div>
-        <span className={styles.dealAll}>查看全部</span>
+        <span className={styles.dealAll}><Link to={{pathname:"/result/success",state:{name:"text"}}}>查看全部</Link></span>
       </div>
     );
   }

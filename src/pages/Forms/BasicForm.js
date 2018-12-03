@@ -22,7 +22,7 @@ const FormItem = Form.Item;
 const { Option } = Select;
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
-const Forms = React.lazy(() => import('./Form'));
+const Forms = React.lazy(() => import('./form'));
 const Detailed = React.lazy(() => import('./StepForm/Detailed'));
 const Activity = React.lazy(() => import('./StepForm/Activity'));
 @connect(({ chart, loading }) => ({
